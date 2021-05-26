@@ -1,7 +1,10 @@
 import React from 'react';
+import BookList from '../book-list';
 
 const BooksPage = () => {
-    return <div>Books</div>
+    return (
+        <BookList />    
+    )
 }
 
 export default BooksPage;
