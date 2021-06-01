@@ -1,21 +1,26 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { HomePage, BooksPage } from '../pages';
-import NavBar from '../nav-bar';
+import HomePage from '../../pages/homePage';
+import BooksPage from '../../pages/booksPage';
+import NavBar from '../navBar/nav-bar';
 
-import { withBooksService } from '../hoc';
+import { HOME } from '../../../utils/routes/routes';
+import { BOOKS } from '../../../utils/routes/routes';
 
-const App = ({ booksService }) => {
+
+import { withBooksService } from '../../hoc/withBooksService';
+
+const App = () => {
     return (
         <main role="main" className="container">
           <NavBar />
           <Switch>
             <Route
-              path="/"
+              path={ HOME }
               component={HomePage}
               exact />  
             <Route
-              path="/books"
+              path={ BOOKS }
               component={BooksPage}
               />
           </Switch>

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import BookListItem from '../book-list-item';
 import { connect } from 'react-redux';
 
-import { withBooksService } from '../hoc';
-import { booksLoaded } from '../../actions';
-import { compose } from '../../utils';
+import BookListItem from '../bookListItem/bookListItem';
+import { withBooksService } from '../../hoc/withBooksService';
+import { booksLoaded } from '../../common/actions/index';
+import { compose } from '../../../utils/compose';
 
 
-import './book-list.css';
+import '../../../styles/bookList.sass';
 
 class BookList extends Component {
 
@@ -20,11 +20,16 @@ class BookList extends Component {
     this.props.booksLoaded(data);
   }
 
+  // useEffect(() => {
+  //   const data = booksService.getBooks();
+  //   booksLoaded(data);
+  // }, [booksService]);
+
 
   render() {
     const { books } = this.props;
     return (
-      <ul className="book-list">
+      <ul className="booklist">
         {
           books.map((book) => {
             return (

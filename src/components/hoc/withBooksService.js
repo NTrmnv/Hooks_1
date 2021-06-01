@@ -1,5 +1,5 @@
 import React from 'react';
-import { BooksConsumer } from '../books-context';
+import { BooksConsumer } from '../common/booksContext/booksContext';
 
 
 const withBooksService = () => (Wrapped) => {
@@ -19,4 +19,4 @@ const withBooksService = () => (Wrapped) => {
     }
 }
 
-export default withBooksService;  
+export { withBooksService };  

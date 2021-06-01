@@ -3,4 +3,4 @@ const compose = (...funcs) => (comp) => {
       (wrapped, f) => f(wrapped), comp);
   };
   
-  export default compose;
+  export { compose };

@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { HOME } from '../../../utils/routes/routes';
+import { BOOKS } from '../../../utils/routes/routes';
+
 const NavBar = () => {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container-fluid">
-        <Link to="/">
+        <Link to={ HOME }>
           <div className="navbar-brand">Main Page</div>
         </Link>
-        <Link to="/books">
+        <Link to={ BOOKS }>
           <div className="navbar-brand">Books</div>
         </Link>
       </div>

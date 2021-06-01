@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import App from './components/app';
-import ErrorBoundary from './components/error-boundary';
-import BooksService from './service/book-service';
-import { BooksProvider } from './components/books-context';
+import App from './components/common/app/app';
+import ErrorBoundary from './components/common/errorBoundary/errorBoundary';
+import BooksService from './service/bookService';
+import { BooksProvider } from './components/common/booksContext/booksContext';
 
-import store from './store';
+import store from './redux/store';
 
 const booksService = new BooksService();
 

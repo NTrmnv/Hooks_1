@@ -1,9 +1,13 @@
 import React from 'react';
 
-import './book-list-item.css';
+import '../../../styles/bookListItem.sass';
 
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
+
+import { BOOKS_TITLE } from '../../../utils/routes/routes';
+import { BOOKS_AUTHOR } from '../../../utils/routes/routes';
+import { BOOKS_PRICE } from '../../../utils/routes/routes';
 
 const BookListItem = ({ book }) => {
   const { title, author, price, coverImage } = book;
@@ -19,11 +23,11 @@ const BookListItem = ({ book }) => {
                 <img src={ coverImage } alt="cover"/>
             </div>
             <div className="book-details">
-                <Link to="/books/title" className="book-title">{ title }</Link>
+                <Link to={ BOOKS_TITLE } className="book-title">{ title }</Link>
                 
-                <Link to="/books/author" className="book-author">{ author }</Link>
+                <Link to={ BOOKS_AUTHOR } className="book-author">{ author }</Link>
                 
-                <Link to="/books/price" className="book-price">${ price }</Link>
+                <Link to={ BOOKS_PRICE } className="book-price">${ price }</Link>
 
                 <button onClick={ goToBooks } className="btn btn-secondary">Go back</button>
 
