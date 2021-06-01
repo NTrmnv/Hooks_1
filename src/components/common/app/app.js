@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import HomePage from '../../pages/homePage';
 import BooksPage from '../../pages/booksPage';
-import NavBar from '../navBar/nav-bar';
+import NavBar from '../navBar/navBar';
 
 import { HOME } from '../../../utils/routes/routes';
 import { BOOKS } from '../../../utils/routes/routes';

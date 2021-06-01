@@ -1,33 +1,20 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import BookListItem from '../bookListItem/bookListItem';
 import { withBooksService } from '../../hoc/withBooksService';
-import { booksLoaded } from '../../common/actions/index';
+import { booksLoaded } from '../../../redux/actions/actions';
 import { compose } from '../../../utils/compose';
-
 
 import '../../../styles/bookList.sass';
 
-class BookList extends Component {
+function BookList ({ booksService, booksLoaded, books }) {
 
-  componentDidMount() {
-    // 1. receive data
-    const { booksService } = this.props;
+  useEffect(() => {
     const data = booksService.getBooks();
+    booksLoaded(data);
+  }, []);
 
-    // 2. dispacth action to store
-    this.props.booksLoaded(data);
-  }
-
-  // useEffect(() => {
-  //   const data = booksService.getBooks();
-  //   booksLoaded(data);
-  // }, [booksService]);
-
-
-  render() {
-    const { books } = this.props;
     return (
       <ul className="booklist">
         {
@@ -39,7 +26,6 @@ class BookList extends Component {
         }
       </ul>
     );
-  }
 }
 
 const mapStateToProps = ({ books }) => {
