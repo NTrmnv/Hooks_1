@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { HOME } from '../../../utils/routes/routes';
-import { BOOKS } from '../../../utils/routes/routes';
+import { HOME, BOOKS } from '../../../utils/routes/routes';
 
 const NavBar = () => {
     return (
