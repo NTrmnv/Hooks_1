@@ -2,12 +2,9 @@ import React from 'react';
 
 import '../../../styles/bookListItem.sass';
 
-import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
-import { BOOKS_TITLE } from '../../../utils/routes/routes';
-import { BOOKS_AUTHOR } from '../../../utils/routes/routes';
-import { BOOKS_PRICE } from '../../../utils/routes/routes';
+import { BOOKS_TITLE, BOOKS_AUTHOR, BOOKS_PRICE } from '../../../utils/routes/routes';
 
 const BookListItem = ({ book }) => {
   const { title, author, price, coverImage } = book;

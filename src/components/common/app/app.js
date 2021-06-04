@@ -4,9 +4,7 @@ import HomePage from '../../pages/homePage';
 import BooksPage from '../../pages/booksPage';
 import NavBar from '../navBar/navBar';
 
-import { HOME } from '../../../utils/routes/routes';
-import { BOOKS } from '../../../utils/routes/routes';
-
+import { HOME, BOOKS } from '../../../utils/routes/routes';
 
 import { withBooksService } from '../../hoc/withBooksService';
 
